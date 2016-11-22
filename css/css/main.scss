@@ -1,8 +1,6 @@
 @import "_variable";
 @import "_mixin";
 
-
-
 body{
 	padding: 2em 5em;
 	background-image: url(../img/img.jpg);
@@ -48,5 +46,25 @@ body{
 	}
 
 
+}
+
+.circle-container {
+  @include on-circle($item-count: 8, $circle-size: 20em, $item-size: 6em); 
+  margin: 5em auto 0;
+  border: solid 5px tomato;
+  
+  img { 
+    display: block; 
+    max-width: 100%; 
+    border-radius: 50%;
+    filter: grayscale(100%);
+    border: solid 5px tomato;
+    transition: .15s;
+    
+    &:hover,
+    &:active {
+      filter: grayscale(0);
+    }
+  }
 }
 
