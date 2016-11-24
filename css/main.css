@@ -4,32 +4,64 @@
 /*centrar*/
 body {
   padding: 2em 5em;
-  background-image: url(../img/img.jpg);
+  background: #000;
+  background-image: url(../img/img.png);
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 40% 100%;
   background-repeat: no-repeat; }
 
 .container {
-  position: fixed;
-  bottom: 27px;
-  text-align: center; }
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 80px; }
+  .container .esferas-content {
+    position: relative;
+    width: 23em;
+    height: 23em;
+    padding: 0;
+    border-radius: 50%;
+    list-style: none; }
+    .container .esferas-content > * {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 6em;
+      height: 6em;
+      margin: -3em; }
+      .container .esferas-content > *:nth-of-type(1) {
+        transform: rotate(0deg) translate(11.5em) rotate(0deg); }
+      .container .esferas-content > *:nth-of-type(2) {
+        transform: rotate(51.42857deg) translate(11.5em) rotate(-51.42857deg); }
+      .container .esferas-content > *:nth-of-type(3) {
+        transform: rotate(102.85714deg) translate(11.5em) rotate(-102.85714deg); }
+      .container .esferas-content > *:nth-of-type(4) {
+        transform: rotate(154.28571deg) translate(11.5em) rotate(-154.28571deg); }
+      .container .esferas-content > *:nth-of-type(5) {
+        transform: rotate(205.71429deg) translate(11.5em) rotate(-205.71429deg); }
+      .container .esferas-content > *:nth-of-type(6) {
+        transform: rotate(257.14286deg) translate(11.5em) rotate(-257.14286deg); }
+      .container .esferas-content > *:nth-of-type(7) {
+        transform: rotate(308.57143deg) translate(11.5em) rotate(-308.57143deg); }
   .container .esfera {
-    background: radial-gradient(rgba(255, 10, 10, 0.6) 8%, #ffff0a);
     border-radius: 100px;
-    height: 100px;
     width: 100px;
-    padding: 16.66667px;
+    height: 100px;
+    padding: 25px;
+    background: radial-gradient(rgba(255, 10, 10, 0.6) 15%, #ffff0a);
     box-shadow: inset 4px 3px 10px 0px rgba(255, 255, 255, 0.55);
+    box-shadow: 0px 0px 30px #ffff0a;
     transition: 1.5s;
     cursor: none;
-    position: relative;
-    float: left;
     text-align: center;
     border: 0px solid yellow;
     margin: 1.5em; }
     .container .esfera:hover {
       background: radial-gradient(rgba(255, 10, 10, 0.6) 15%, #ffff0a);
-      transform: rotate(360deg) scale(1.8, 1.8);
+      transform: rotate(360deg) scale(1.4, 1.4);
       box-shadow: 0px 0px 60px #ffff0a; }
   .container .star {
     color: #ff0000;
