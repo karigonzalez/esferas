@@ -2,57 +2,55 @@
 @import "_mixin";
 
 body{
-    padding: 2em 5em;
-    background: #000;
-    background-image: url(../img/img.png);
-    background-attachment: fixed;
-    background-size: 40% 100%;
-    background-repeat:no-repeat;
+   padding: 2em 5em;
+   background: #000;
+   background-image: url(../img/img.png);
+   background-attachment: fixed;
+   background-size: 40% 100%;
+   background-repeat:no-repeat;
 }
 
 .container {
-	background: transparent;
-	display: flex;
+    background: transparent;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
     margin-left: 80px;
 
-    .esferas-content{
-    	@include on-circle($item-count: 7, $circle-size: 23em, $item-size: 6em); 
+.esferas-content{
+    @include on-circle($item-count: 7, $circle-size: 23em, $item-size: 6em); 
     }
 
 
-	.esfera{
-		border-radius: $base-tamanio-esfera;
-		width: $base-tamanio-esfera;
-		height: $base-tamanio-esfera;
-		padding: $base-tamanio-esfera/4;
-        background: radial-gradient($color-esfera2 15%, $color-esfera);
-        box-shadow: inset 4px 3px 10px 0px $color-brillo; 
-        box-shadow: 0px 0px 30px $color-esfera ;
-        transition: 1.5s;
-        cursor: none;
-        text-align: $centrar;
-        border: 0px solid yellow;
-        margin: 1.5em;
+.esfera{
+    border-radius: $base-tamanio-esfera;
+    width: $base-tamanio-esfera;
+    height: $base-tamanio-esfera;
+    padding: $base-tamanio-esfera/4;
+    background: radial-gradient($color-esfera2 15%, $color-esfera);
+    box-shadow: inset 4px 3px 10px 0px $color-brillo; 
+    box-shadow: 0px 0px 30px $color-esfera ;
+    transition: 1.5s;
+    cursor: none;
+    text-align: $centrar;
+    border: 0px solid yellow;
+    margin: 1.5em; 
         
-        
-        
-        &:hover{
-        	background: radial-gradient($color-esfera2 15%, $color-esfera);            
-            transform: rotate(360deg) scale(1.4,1.4) ;
-            box-shadow: 0px 0px 60px $color-esfera ;
-        }
+    &:hover{
+      background: radial-gradient($color-esfera2 15%, $color-esfera);            
+      transform: rotate(360deg) scale(1.4,1.4) ;
+      box-shadow: 0px 0px 60px $color-esfera ;
+      }
         
 	}
     
     .star{
-		color: $color-estrella;
-		font-size: 1.5em;
-        text-align: center;
-        line-height: 0.8em;
-        letter-spacing: 1px;
-	}
+       color: $color-estrella;
+       font-size: 1.5em;
+       text-align: center;
+       line-height: 0.8em;
+       letter-spacing: 1px;
+       }
 
 }
